@@ -72,7 +72,7 @@ The [`assessments/`](assessments) folder holds three further variants of the sam
 | [End_Of_Course_Assessment_EnvironmentalDataset](assessments/End_Of_Course_Assessment_EnvironmentalDataset.ipynb) | California housing (scikit-learn) |
 | [End_Of_Course_Assessment_Health](assessments/End_Of_Course_Assessment_Health.ipynb) | Wine (scikit-learn) |
 
-These are the Colab-style templates (they mount Google Drive and contain the "YOUR CODE HERE" exercise cells); they have not been adapted to run locally.
+These are templates with "YOUR CODE HERE" exercise cells, adapted to run locally: they save figures to an `outputs/` folder next to the notebook instead of Google Drive. The text in the notebooks still refers to Drive, as in the originals. The California housing data is downloaded by scikit-learn the first time it is used, so that notebook needs an internet connection on its first run. In the Wine notebook, the `fcluster` call used `k=3`, which is not a valid argument in SciPy; it is now `t=3`.
 
 ## Datasets
 
@@ -93,7 +93,7 @@ Notebooks/        The instructors' original notebooks, unmodified, written for G
 Notebooks_local/  The working versions of every notebook, with the completed exercises. They run locally
                   with Jupyter (no Google Drive) and have their own copy of Data/, plus a Lab1_workspace/
                   folder for the files Lab 1 writes.
-assessments/      Three variants of the end-of-course assessment (Colab-style templates).
+assessments/      Three variants of the end-of-course assessment (templates, adapted to run locally).
 Data/             Datasets used by the notebooks.
 ```
 
