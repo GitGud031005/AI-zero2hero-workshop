@@ -10,11 +10,11 @@ Practical notebooks and worked exercises from the **AI Zero to Hero** short cour
 | 1 | Lab 2, Part 1 | Descriptive statistics and hypothesis tests (drug costs, West Nile virus data) | [Day1_Lab2_Exploring_Data_Part1](Notebooks_local/Day1_Lab2_Exploring_Data_Part1.ipynb) |
 | 1 | Lab 2, Part 2 | Graphical data exploration | [Day1_Lab2_Exploring_Data_Part2](Notebooks_local/Day1_Lab2_Exploring_Data_Part2.ipynb) |
 | 1 | Lab 3 | Clustering: distances, hierarchical clustering, k-means | [Day1_Lab3_Clustering](Notebooks_local/Day1_Lab3_Clustering.ipynb) |
-| 2 | Lab 5 | Classification | [Day2_Lab5_Classification](Notebooks/Day2_Lab5_Classification.ipynb) |
-| 2 | Lab 6 | Regression and predictive modelling | [Day2_Lab6_Regression](Notebooks/Day2_Lab6_Regression.ipynb) |
+| 2 | Lab 5 | Classification | [Day2_Lab5_Classification](Notebooks_local/Day2_Lab5_Classification.ipynb) |
+| 2 | Lab 6 | Regression and predictive modelling | [Day2_Lab6_Regression](Notebooks_local/Day2_Lab6_Regression.ipynb) |
 | – | End of course | Practical assessment: EDA, prediction and clustering on one dataset | [End_Of_Course_Assessment_Diabetes_Fixed](Notebooks_local/End_Of_Course_Assessment_Diabetes_Fixed.ipynb) |
 
-Notebook file names keep the instructors' numbering (Labs 1–3 and 5–6).
+Notebook file names keep the instructors' numbering (Labs 1–3 and 5–6). All links above point to the working versions in `Notebooks_local/`; the instructors' unmodified originals are in `Notebooks/`.
 
 ## What each session covers
 
@@ -62,7 +62,17 @@ Notebook file names keep the instructors' numbering (Labs 1–3 and 5–6).
 
 ### End-of-course assessment
 
-A practical on the diabetes dataset that brings the course together: exploratory data analysis, regression and classification models, hierarchical clustering with dendrograms, and a short written summary.
+A practical that brings the course together: exploratory data analysis, regression and classification models, hierarchical clustering with dendrograms, and a short written summary. The version in `Notebooks_local/` uses the diabetes dataset.
+
+The [`assessments/`](assessments) folder holds three further variants of the same assessment, with the same structure (set-up, EDA, predictive modelling, hierarchical clustering, written summary) but different data:
+
+| Notebook | Dataset |
+|---|---|
+| [End_Of_Course_Assessment_DiabetesDataset](assessments/End_Of_Course_Assessment_DiabetesDataset.ipynb) | Diabetes (scikit-learn) |
+| [End_Of_Course_Assessment_EnvironmentalDataset](assessments/End_Of_Course_Assessment_EnvironmentalDataset.ipynb) | California housing (scikit-learn) |
+| [End_Of_Course_Assessment_Health](assessments/End_Of_Course_Assessment_Health.ipynb) | Wine (scikit-learn) |
+
+These are the Colab-style templates (they mount Google Drive and contain the "YOUR CODE HERE" exercise cells); they have not been adapted to run locally.
 
 ## Datasets
 
@@ -74,16 +84,16 @@ A practical on the diabetes dataset that brings the course together: exploratory
 | `Data/` | `iris.csv`: 150 flowers, 3 species (the notebooks load Iris from scikit-learn instead) | Course data folder |
 | `Data/` | `updated_costs.csv`, `updated_costs2.csv`: files written by the Lab 1 exercises | Lab 1 |
 | scikit-learn | Breast cancer (569 samples), Iris, Diabetes (442 samples), synthetic `make_classification` data | Labs 3, 5, 6 and the assessment |
+| scikit-learn | California housing and Wine | The `assessments/` variants |
 
 ## Repository layout
 
 ```
-Notebooks/        Original notebooks, written for Google Colab.
-                  The Day 2 labs need no Google Drive, so they run locally as they are;
-                  the completed Day 2 exercises are in this folder.
-Notebooks_local/  Notebooks adapted to run locally with Jupyter (no Google Drive): Day 1, the Day 2 copies
-                  and the assessment. It has its own copy of Data/ and a Lab1_workspace/ folder for the
-                  files Lab 1 writes. The completed Day 1 exercises are in this folder.
+Notebooks/        The instructors' original notebooks, unmodified, written for Google Colab.
+Notebooks_local/  The working versions of every notebook, with the completed exercises. They run locally
+                  with Jupyter (no Google Drive) and have their own copy of Data/, plus a Lab1_workspace/
+                  folder for the files Lab 1 writes.
+assessments/      Three variants of the end-of-course assessment (Colab-style templates).
 Data/             Datasets used by the notebooks.
 ```
 
@@ -105,7 +115,7 @@ cd Notebooks_local
 jupyter notebook
 ```
 
-Use the notebooks in `Notebooks_local/` for Day 1 and the assessment. They read from the local `Data/` folder and save files next to the notebook instead of using Google Drive. The Day 2 labs run from either folder, and the completed Day 2 versions are in `Notebooks/`. Developed with Python 3.12 and scikit-learn 1.9.
+All notebooks in `Notebooks_local/` read from the local `Data/` folder and save files next to the notebook instead of using Google Drive. Developed with Python 3.12 and scikit-learn 1.9.
 
 ## Key ideas from the course
 
@@ -119,4 +129,4 @@ Use the notebooks in `Notebooks_local/` for Day 1 and the assessment. They read 
 
 ## Credits
 
-The course notebooks and datasets are the instructors' course materials. This repository is a learner's workspace, with worked answers added to some notebooks in cells labelled "My answer" or "My answers".
+The course notebooks and datasets are the instructors' course materials. This repository is a learner's workspace: the worked answers, added in cells labelled "My answer" or "My answers", are in `Notebooks_local/`.
